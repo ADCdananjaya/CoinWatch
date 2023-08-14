@@ -1,20 +1,13 @@
-import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
-import Coins from "./components/coins";
-import Exchanges from "./components/exchanges";
-import Home from "./components/home";
-import News from "./components/news";
-import Sidebar from "./components/sidebar";
+import Dashboard from "./components/dashboard";
+import Landing from "./components/landing";
 
 const App = () => {
   return (
-    <div className="w-full h-full flex flex-row">
-      <Sidebar />
+    <div className="w-full h-full">
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/coins" element={<Coins />} />
-        <Route path="/exchanges" element={<Exchanges />} />
-        <Route path="/news" element={<News />} />
+        <Route path="/" element={<Landing />} />
+        <Route path="/dashboard/*" element={<Dashboard />} />
       </Routes>
     </div>
   );
