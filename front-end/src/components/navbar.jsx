@@ -7,7 +7,7 @@ import sideItems from "../const/sideItems";
 const Navbar = (props) => {
   const [isActive, setActive] = useState(false);
   return (
-    <div className="w-full h-auto relative">
+    <div className="w-full h-auto relative z-10">
       <div className="w-full h-auto flex md:hidden flex-row items-center justify-between p-5">
         <Logo />
         <div className="flex flex-row gap-3">
