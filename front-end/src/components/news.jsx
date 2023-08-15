@@ -29,7 +29,9 @@ const News = ({ data, limit = 20 }) => {
               className="w-72 h-auto flex flex-col justify-between bg-gray-100 text-[#352E5B] gap-5 p-3 border rounded-lg shadow-md hover:shadow-lg"
             >
               <div className="w-full flex flex-row justify-between items-start">
-                <p className="font-semibold text-lg">{item.name}</p>
+                <p className="w-7/12 flex-wrap font-semibold text-lg">
+                  {item.name}
+                </p>
                 <img
                   src={item?.image?.thumbnail?.contentUrl || thumbnail}
                   className="w-24 object-contain"
