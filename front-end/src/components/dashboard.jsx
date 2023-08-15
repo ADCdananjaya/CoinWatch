@@ -34,7 +34,6 @@ const Dashboard = () => {
         <Route path="/" element={<Home data={data} news={news} />} />
         <Route path="/coins" element={<Coins data={data} />} />
         <Route path="/coins/:id" element={<CoinDetails data={data} />} />
-        <Route path="/exchanges" element={<Exchanges />} />
         <Route path="/news" element={<News data={news} />} />
       </Routes>
     </div>

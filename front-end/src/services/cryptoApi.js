@@ -29,4 +29,49 @@ const getCoins = async () => {
   }
 };
 
+export const getCoin = async (id) => {
+  try {
+    const newOptions = { ...options };
+    newOptions.url = `https://${host}/coin/${id}`;
+    newOptions.params = {
+      referenceCurrencyUuid: "yhjMzLPhuIDl",
+      timePeriod: "24h",
+    };
+    const response = await axios.request(newOptions);
+    return response;
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+export const getModifiers = async (id) => {
+  try {
+    const newOptions = { ...options };
+    newOptions.url = `https://${host}/coin/${id}/modifiers`;
+    newOptions.params = {
+      limit: "5",
+      offset: "0",
+    };
+    const response = await axios.request(newOptions);
+    return response;
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+export const getHistory = async (id) => {
+  try {
+    const newOptions = { ...options };
+    newOptions.url = `https://${host}/coin/${id}/history`;
+    newOptions.params = {
+      referenceCurrencyUuid: "yhjMzLPhuIDl",
+      timePeriod: "7d",
+    };
+    const response = await axios.request(newOptions);
+    return response;
+  } catch (error) {
+    console.error(error);
+  }
+};
+
 export default getCoins;
