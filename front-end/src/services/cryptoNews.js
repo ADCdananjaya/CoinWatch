@@ -4,7 +4,7 @@ const host = import.meta.env.VITE_API_NEWS_HOST;
 
 const options = {
   method: "GET",
-  url: `https://${host}/news/search?q=cryptocurrency`,
+  url: `https://${host}/news/search?q=cryptocurrency&count=20`,
   params: {
     safeSearch: "Off",
     textFormat: "Raw",
