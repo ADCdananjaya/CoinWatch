@@ -13,7 +13,7 @@ const News = ({ data, limit = 20 }) => {
   }, [items]);
 
   return (
-    <div className="w-full h-auto flex flex-col items-center justify-center bg-slate-50">
+    <div className="w-full h-auto flex flex-col items-center justify-center bg-white">
       {limit === 20 && (
         <p className="w-full md:w-11/12 text-center md:text-left text-3xl text-[#352E5B] font-semibold my-8">
           Latest News.

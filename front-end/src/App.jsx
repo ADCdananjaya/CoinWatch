@@ -3,6 +3,8 @@ import { useState } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Dashboard from "./components/dashboard";
 import Landing from "./components/landing";
+import Login from "./components/login";
+import Register from "./components/register";
 import auth from "./services/authService";
 
 const App = () => {
@@ -25,6 +27,14 @@ const App = () => {
         <Route
           path="/dashboard/*"
           element={user?.name ? <Dashboard user={user} /> : <Navigate to="/" />}
+        />
+        <Route
+          path="/login"
+          element={user?.name ? <Navigate to="/dashboard/" /> : <Login />}
+        />
+        <Route
+          path="/register"
+          element={user?.name ? <Navigate to="/dashboard/" /> : <Register />}
         />
       </Routes>
     </div>

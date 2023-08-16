@@ -21,7 +21,7 @@ const Coins = ({ data, limit = 100 }) => {
   }, [searchTerm, items]);
 
   return (
-    <div className="w-full h-auto bg-slate-50 flex flex-col items-center">
+    <div className="w-full h-auto bg-white flex flex-col items-center">
       {limit === 100 && (
         <div className="w-full flex flex-wrap justify-center md:justify-between gap-5 px-8 my-8 items-center">
           <p className="text-2xl md:text-3xl font-semibold text-[#352E5B]">
@@ -30,7 +30,7 @@ const Coins = ({ data, limit = 100 }) => {
           <input
             type="text"
             name="search"
-            className="border border-x-0 border-t-0 border-b-2 border-[#7D67FF] px-2 bg-slate-50 text-[#352E5B] focus:ring-0 outline-none"
+            className="border border-x-0 border-t-0 border-b-2 border-[#7D67FF] px-2 bg-white text-[#352E5B] focus:ring-0 outline-none"
             placeholder="Search"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}

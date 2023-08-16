@@ -44,7 +44,7 @@ const Navbar = ({ user }) => {
           </div>
           {isActive && (
             <div className="md:hidden border fixed h-screen top-0 w-full bg-black bg-opacity-50">
-              <div className="absolute top-0 right-0 h-full w-40 flex flex-col bg-slate-200 text-gray-900 p-3">
+              <div className="absolute top-0 right-0 h-full w-40 flex flex-col bg-slate-100 text-gray-900 p-3">
                 <div className="w-full flex justify-end mb-3">
                   <img
                     src={images.wrong}

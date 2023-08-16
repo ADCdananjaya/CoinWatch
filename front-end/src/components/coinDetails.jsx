@@ -34,7 +34,7 @@ const CoinDetails = ({ data }) => {
   }, []);
 
   return (
-    <div className="w-full h-auto bg-slate-50 flex flex-col items-center">
+    <div className="w-full h-auto bg-white flex flex-col items-center">
       <p className="w-10/12 text-center text-3xl font-semibold text-[#352E5B] mt-8">{`${coin?.name} (${coin?.symbol}) Price`}</p>
       <p className="w-10/12 text-center text-md text-[#352E5B] pb-8 border-b-2">{`${coin?.name} live price in US dollars. View value statistics, market and supply.`}</p>
       <LineChart
