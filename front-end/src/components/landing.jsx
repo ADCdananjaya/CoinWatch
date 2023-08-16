@@ -2,6 +2,7 @@ import Features from "./features";
 import Hero from "./hero";
 import Insights from "./insights";
 import Login from "./login";
+import Mission from "./mission";
 import Navbar from "./navbar";
 import Reach from "./reach";
 
@@ -16,6 +17,7 @@ const Landing = ({ user }) => {
       <Features />
       <Insights />
       <Reach />
+      <Mission />
     </div>
   );
 };
