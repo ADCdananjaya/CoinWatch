@@ -16,7 +16,7 @@ const Navbar = ({ user }) => {
           <div className="flex flex-row gap-5 items-center">
             <Link
               to="/login"
-              className="text-[#352E5B] text-opacity-75 text-lg hover:text-opacity-100"
+              className="hidden md:block text-[#352E5B] text-opacity-75 text-lg hover:text-opacity-100"
             >
               Login
             </Link>

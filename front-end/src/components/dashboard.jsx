@@ -10,7 +10,7 @@ import getNews from "../services/cryptoNews";
 import CoinDetails from "./coinDetails";
 import Navbar from "./navbar";
 
-const Dashboard = () => {
+const Dashboard = ({ user }) => {
   const [data, setData] = useState();
   const [news, setNews] = useState();
 
@@ -28,7 +28,7 @@ const Dashboard = () => {
     <div className="w-full h-full min-h-screen flex flex-col md:flex-row">
       <div className="bg-slate-200">
         <Sidebar />
-        <Navbar />
+        <Navbar user={user} />
       </div>
       <Routes>
         <Route path="/" element={<Home data={data} news={news} />} />
