@@ -1,3 +1,4 @@
+import Features from "./features";
 import Hero from "./hero";
 import Login from "./login";
 import Navbar from "./navbar";
@@ -10,6 +11,7 @@ const Landing = ({ user }) => {
         <Navbar user={user} />
         <Hero />
       </div>
+      <Features />
     </div>
   );
 };

@@ -13,6 +13,9 @@ import wrong from "./wrong.svg";
 import exclamtion from "./exclamation.svg";
 import arrows from "./arrows.svg";
 import menu from "./menu.svg";
+import dollar2 from "./dollar2.svg";
+import news2 from "./news2.svg";
+import stats from "./stats.svg";
 
 export default {
   logo,
@@ -30,4 +33,7 @@ export default {
   exclamtion,
   arrows,
   menu,
+  dollar2,
+  stats,
+  news2,
 };
