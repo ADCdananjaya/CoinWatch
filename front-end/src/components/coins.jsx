@@ -23,7 +23,7 @@ const Coins = ({ data, limit = 100 }) => {
   return (
     <div className="w-full h-auto bg-slate-50 flex flex-col items-center">
       {limit === 100 && (
-        <div className="w-full flex flex-wrap justify-between gap-5 px-8 my-8 items-center">
+        <div className="w-full flex flex-wrap justify-center md:justify-between gap-5 px-8 my-8 items-center">
           <p className="text-2xl md:text-3xl font-semibold text-[#352E5B]">
             Available Coins
           </p>
@@ -37,7 +37,7 @@ const Coins = ({ data, limit = 100 }) => {
           />
         </div>
       )}
-      <div className="w-11/12 flex flex-wrap gap-5">
+      <div className="w-full md:w-11/12 flex flex-wrap justify-center md:justify-normal gap-5">
         {coins &&
           coins.map((coin) => (
             <Link

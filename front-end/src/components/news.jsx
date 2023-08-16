@@ -15,11 +15,11 @@ const News = ({ data, limit = 20 }) => {
   return (
     <div className="w-full h-auto flex flex-col items-center justify-center bg-slate-50">
       {limit === 20 && (
-        <p className="w-11/12 text-3xl text-[#352E5B] font-semibold my-8">
+        <p className="w-full md:w-11/12 text-center md:text-left text-3xl text-[#352E5B] font-semibold my-8">
           Latest News.
         </p>
       )}
-      <div className="w-11/12 h-auto flex flex-wrap gap-5">
+      <div className="w-full md:w-11/12 h-auto flex flex-wrap justify-center md:justify-normal gap-5">
         {news &&
           news.map((item, i) => (
             <a
