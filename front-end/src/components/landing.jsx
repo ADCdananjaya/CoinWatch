@@ -1,4 +1,5 @@
 import Features from "./features";
+import Footer from "./footer";
 import Hero from "./hero";
 import Insights from "./insights";
 import Login from "./login";
@@ -18,6 +19,7 @@ const Landing = ({ user }) => {
       <Insights />
       <Reach />
       <Mission />
+      <Footer />
     </div>
   );
 };

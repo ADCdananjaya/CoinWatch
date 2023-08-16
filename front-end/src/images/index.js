@@ -16,6 +16,7 @@ import menu from "./menu.svg";
 import dollar2 from "./dollar2.svg";
 import news2 from "./news2.svg";
 import stats from "./stats.svg";
+import share from "./share.svg";
 
 export default {
   logo,
@@ -36,4 +37,5 @@ export default {
   dollar2,
   stats,
   news2,
+  share,
 };
