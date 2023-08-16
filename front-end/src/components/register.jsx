@@ -31,7 +31,7 @@ const Register = () => {
       const error = validate({ name, email, password }, schema);
       setErrors(error);
       matchPassowrds();
-      if (error || errors) return;
+      if (error || password !== password2) return;
       await register({ name, email, password });
       window.location.href = "/login";
     } catch (ex) {
