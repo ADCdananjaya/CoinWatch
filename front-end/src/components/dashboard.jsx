@@ -26,7 +26,7 @@ const Dashboard = ({ user }) => {
 
   return (
     <div className="w-full h-full min-h-screen flex flex-col md:flex-row">
-      <div className="bg-slate-200">
+      <div className="bg-slate-100">
         <Sidebar />
         <Navbar user={user} />
       </div>

@@ -7,7 +7,7 @@ import Stats from "./stats";
 const Home = ({ data, news }) => {
   if (!data) return <Loading />;
   return (
-    <div className="w-full h-full bg-slate-50 flex flex-col px-8 pt-5">
+    <div className="w-full h-full bg-white flex flex-col px-8 pt-5">
       <p className="text-2xl md:text-3xl text-[#352E5B] font-semibold my-5">
         Global Crypto Stats
       </p>

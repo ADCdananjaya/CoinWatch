@@ -11,7 +11,7 @@ const Sidebar = () => {
           <Logo />
         </div>
         <div className="w-full h-5/6 flex flex-col justify-between items-center">
-          <div className="w-full h-auto flex flex-col gap-3 border">
+          <div className="w-full h-auto flex flex-col gap-3">
             {sideItems.map((item) => (
               <NavLink
                 key={item.id}
