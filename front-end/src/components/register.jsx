@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Joi from "joi-browser";
 import validate from "../utils/formValidate";
 import image from "../images/register.jpg";
@@ -12,6 +12,7 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const [password2, setPassword2] = useState("");
   const [errors, setErrors] = useState({});
+  const navigate = useNavigate();
 
   const schema = {
     name: Joi.string().required().label("Username"),
@@ -34,7 +35,7 @@ const Register = () => {
       matchPassowrds();
       if (error || password !== password2) return;
       await register({ name, email, password });
-      window.location.href = "/login";
+      navigate("/login");
     } catch (ex) {
       setErrors({ name: "Somthing went wrong." });
     }
