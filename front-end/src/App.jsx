@@ -30,7 +30,13 @@ const App = () => {
         />
         <Route
           path="/login"
-          element={user?.name ? <Navigate to="/dashboard/" /> : <Login />}
+          element={
+            user?.name ? (
+              <Navigate to="/dashboard/" />
+            ) : (
+              <Login setUser={setUser} />
+            )
+          }
         />
         <Route
           path="/register"

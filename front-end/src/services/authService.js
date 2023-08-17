@@ -6,6 +6,7 @@ const tokenKey = import.meta.env.VITE_API_TOKEN_KEY;
 export const login = async (data) => {
   const { data: jwt } = await axios.post(`${apiEndPoint}/auth`, data);
   localStorage.setItem(tokenKey, jwt);
+  return jwt;
 };
 
 export const logout = () => {
@@ -21,4 +22,12 @@ export const getCurrentUser = () => {
   }
 };
 
-export default { login, logout, getCurrentUser };
+export const getUserByToken = (jwt) => {
+  try {
+    return jwtDecode(jwt);
+  } catch (error) {
+    return {};
+  }
+};
+
+export default { login, logout, getCurrentUser, getUserByToken };

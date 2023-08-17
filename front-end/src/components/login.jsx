@@ -1,15 +1,16 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Joi from "joi-browser";
 import validate from "../utils/formValidate";
-import { login } from "../services/authService";
+import { getUserByToken, login } from "../services/authService";
 import loginImage from "../images/login.png";
 import logo from "../images/logo.svg";
 
-const Login = () => {
+const Login = ({ setUser }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState({});
+  const navigate = useNavigate();
 
   const schema = {
     email: Joi.string().email().required().label("Email"),
@@ -21,8 +22,10 @@ const Login = () => {
       const error = validate({ email, password }, schema);
       setErrors(error);
       if (error) return;
-      await login({ email, password });
-      window.location.href = "/dashboard/";
+      const jwt = await login({ email, password });
+      const user = await getUserByToken(jwt);
+      setUser(user);
+      navigate("/dashboard/");
     } catch (ex) {
       setErrors({
         email: "Invalid email or password.",
