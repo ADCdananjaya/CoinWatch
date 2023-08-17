@@ -4,6 +4,7 @@ import Joi from "joi-browser";
 import validate from "../utils/formValidate";
 import { login } from "../services/authService";
 import loginImage from "../images/login.png";
+import logo from "../images/logo.svg";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -34,8 +35,18 @@ const Login = () => {
     <section className="h-screen text-[#352E5B]">
       <div className="w-full md:w-11/12 h-full">
         <div className="g-6 flex h-full flex-wrap items-center justify-center lg:justify-between">
-          <div className="shrink-1 mb-12 grow-0 basis-auto md:mb-0 w-10/12 md:w-9/12 md:shrink-0 lg:w-6/12 xl:w-6/12">
-            <img src={loginImage} className="w-full" alt="Sample image" />
+          <div className="flex justify-center md:justify-normal shrink-1  grow-0 basis-auto mb-0 w-10/12 md:w-9/12 md:shrink-0 lg:w-6/12 xl:w-6/12">
+            <img
+              src={loginImage}
+              className="hidden md:flex w-full"
+              alt="Sample image"
+            />
+            <Link
+              to="/"
+              className="flex md:hidden items-center justify-center w-full"
+            >
+              <img src={logo} className="w-5/12" alt="Sample image" />
+            </Link>
           </div>
 
           <div className="mb-12 md:mb-0 w-11/12 md:w-8/12 lg:w-5/12 xl:w-5/12">
